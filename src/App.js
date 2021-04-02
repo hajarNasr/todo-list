@@ -3,7 +3,12 @@ import TodoForm from "./components/TodoForm";
 import TodoList from "./components/TodoList";
 
 function App() {
-  const [list, setList] = useState([]);
+  const initList = [
+    { text: "Item One. Checked", isChecked: true },
+    { text: "Item Two. Unchecked", isChecked: false },
+    { text: "Item Three. Unchecked", isChecked: false },
+  ];
+  const [list, setList] = useState(initList);
   const handleAddNewItem = (newItem) => {
     setList([newItem, ...list]);
   };
