@@ -1,0 +1,146 @@
+*{
+  box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+  outline: none;
+}
+body {
+  font-family: -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-color: #E4FFF9;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+.App>*{
+  width: 50%;
+  margin: auto;
+  min-width: 300px;
+}
+.App h1{
+  text-align: center;
+  margin-bottom: 20px;
+  padding: 10px;
+  color: #667e73;
+}
+.todo-form{
+  display: flex;
+  margin: auto;
+  margin-bottom: 15px;
+}
+.todo-form>*{
+  margin: auto;
+  height: 30px;
+}
+.todo-form> input, .update-form input{
+  flex: 0.75;
+  padding-left: 5px;
+  border: 1px solid rgb(141, 151, 141);
+}
+.todo-form> button, .update-form button{
+  flex: 0.20;
+  font-size: 18px;
+  border: none;
+  box-shadow: 0px 0px 2px 2px rgb(220 227 220);
+  background-color: #f1ee33cb;
+  color: #171818;
+  border-radius: 3px;
+  cursor: pointer;
+}
+.update-form button{
+  box-shadow:none;
+}
+.todo-form> button:active{
+  transform: translate(1px, 1px);
+}
+.todo-list{
+  list-style: none;
+}
+.todo-item{
+  display: flex;
+  align-items: center;
+  margin-bottom: 5px;
+  background-color: #667e73;
+  box-shadow: -1px 1px 3px 1px rgb(207 192 192);
+  border-left: 10px solid #F1EE33;
+  min-height: 40px;
+  border-radius: 3px;
+}
+.todo-item>*{
+  padding: 5px;
+}
+.todo-item-text{
+  flex: 1;
+  color: white;
+  font-size: 20px;
+}
+.todo-item-btns{
+  display: flex;
+}
+.todo-item-btns button{
+  border: none;
+  background-color: transparent;
+  margin-left: 10px;
+  font-size: 15px;
+  outline: none;
+  cursor: pointer;
+}
+.todo-item-btns button:first-child{
+  color: rgb(253 160 165);
+}
+.todo-item-btns button:last-child{
+  color:  rgb(247, 247, 66);
+}
+
+.todo-item-btns button:last-child:disabled{
+  color: rgb(221, 220, 220);
+  cursor: not-allowed;
+}
+
+.update-form-wrapper{
+  position: fixed;
+  width: 100%;
+  height: 100vh;
+  top: 0;
+  left: 0;
+  background-color: rgba(0,0,0,.6);
+  display: flex;
+  justify-content: center;
+  min-width: 300px;
+}
+.update-form{
+  width: 40%;
+  height: 30px;
+  display: flex;
+  justify-content: space-evenly;
+}
+
+.close-btn{
+  position: absolute;
+  top:40px;
+  background-color: transparent;
+  border: none;
+  color: #fffb01;
+  font-size: 18px;
+  cursor: pointer;
+}
+
+.line-throgh{
+  text-decoration: line-through;
+  color: rgb(221, 220, 220);
+}
+
+@media(max-width:650px){
+  .App>*{
+    width: 90%;
+  }
+  .update-form{
+    width: 90%;
+  }
+}
